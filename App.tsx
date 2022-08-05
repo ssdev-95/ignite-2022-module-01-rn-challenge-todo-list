@@ -1,20 +1,34 @@
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+
+import {
+  DefaultTheme,
+  Provider as PaperProvider,
+  Text,
+} from 'react-native-paper'
+
+import { colors } from './assets/colors'
+
+const theme = {
+  ...DefaultTheme,
+  ...colors,
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider theme={theme}>
+      <View style={style.container}>
+        <Text style={{ color: colors.gray[100] }}>Hello world!</Text>
+        <StatusBar style="light" translucent />
+      </View>
+    </PaperProvider>
   )
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: '100%',
+    backgroundColor: colors.gray[600],
   },
 })
