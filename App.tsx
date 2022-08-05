@@ -1,34 +1,31 @@
 import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, View } from 'react-native'
+import {colors} from './assets/colors'
 
-import {
-  DefaultTheme,
-  Provider as PaperProvider,
-  Text,
-} from 'react-native-paper'
+import { Background } from './components/background'
+import { Header } from './components/header'
+import { Input } from './components/input'
 
-import { colors } from './assets/colors'
+import { Tasks } from './components/task-list'
 
-const theme = {
-  ...DefaultTheme,
-  ...colors,
+interface TaskType {
+  id:string
+	description:string
 }
 
 export default function App() {
+  const tasks:TaskType[] = []
   return (
-    <PaperProvider theme={theme}>
-      <View style={style.container}>
-        <Text style={{ color: colors.gray[100] }}>Hello world!</Text>
-        <StatusBar style="light" translucent />
-      </View>
-    </PaperProvider>
+	  <Background>
+		  <Header />
+			 <Input />
+
+			<Tasks tasks={tasks} />
+
+			<StatusBar
+			  style="light"
+				translucent
+				backgroundColor={colors.gray[700]}
+			/>
+		</Background>
   )
 }
-
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: colors.gray[600],
-  },
-})

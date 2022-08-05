@@ -8,5 +8,7 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.gray[700],
     alignItems: 'center',
     justifyContent: 'center',
+		paddingTop: 80,
+		paddingBottom: 80
   },
 })

@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "todo-list",
+    "name": "TodoList",
     "slug": "todo-list",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/rocket.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#5c5c5c"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
