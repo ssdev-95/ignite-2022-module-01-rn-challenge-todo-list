@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
 		width: 411,
 		maxWidth: '100%',
 		paddingHorizontal: 16,
-		marginVertical: 16,
+		marginVertical: 20,
 		flexDirection: 'row',
 		alignItems: 'center',
 		justifyContent: 'space-between'
@@ -39,5 +39,19 @@ export const styles = StyleSheet.create({
 		display: 'flex',
 		alignItems: 'center',
 		color: colors.purple[500]
+	},
+	emptyTaskTitle: {
+		color: colors.gray[300],
+		marginTop: 16,
+		marginBottom: 4
+	},
+	emptyTaskText: {
+		color: colors.gray[400]
+	},
+	tasksContainer: {
+		width: 411,
+		maxWidth: '100%',
+		paddingHorizontal: 16,
+		alignItems: 'center'
 	}
 })

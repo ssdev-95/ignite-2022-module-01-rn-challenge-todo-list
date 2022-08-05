@@ -20,7 +20,6 @@ export const styles = StyleSheet.create({
 		backgroundColor: colors.gray[500]
   },
   button: {
-    backgroundColor: colors.blue[500],
 		width: 56,
 		height: 56,
 		borderRadius: 6,
